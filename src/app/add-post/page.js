@@ -1,1 +1,5 @@
 // shows a form so a user can submit their own blog post (fields: name, author, content). this data should be sent to the posts table and the user should be redirected to the posts page (where they should see their new post available to read)
+
+export default function Page() {
+  return <p>Add a post</p>;
+}
