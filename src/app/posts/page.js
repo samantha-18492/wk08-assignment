@@ -3,7 +3,7 @@ import { db } from "@/app/utils/utilities.js";
 import Link from "next/link";
 
 export default async function Page() {
-  const res = await db.query(`SELECT * FROM posts`);
+  const res = await db.query(`SELECT * FROM blog_posts ORDER BY id ASC`);
   const posts = res.rows;
 
   return (
