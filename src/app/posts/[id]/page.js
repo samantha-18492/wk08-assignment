@@ -13,6 +13,7 @@ export default async function Page({ params }) {
           <h2>{post.title}</h2>
           <p>By {post.author}</p>
           <p>Posted on: date</p>
+          {/* Add <Image src={post.img_url} alt="" />*/}
           <p>{post.content}</p>
         </div>
       ))}
