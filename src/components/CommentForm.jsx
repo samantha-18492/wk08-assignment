@@ -1,5 +1,6 @@
 import { db } from "@/app/utils/utilities.js";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export default function CommentForm({ postId }) {
   async function handleSubmit(formData) {
@@ -13,6 +14,7 @@ export default function CommentForm({ postId }) {
     console.log(newComment);
 
     revalidatePath(`/posts/${postId}`);
+    redirect(`/posts/${postId}`);
   }
   return (
     <div>
