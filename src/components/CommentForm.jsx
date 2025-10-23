@@ -1,15 +1,18 @@
 import { db } from "@/app/utils/utilities.js";
+import { revalidatePath } from "next/cache";
 
 export default function CommentForm({ postId }) {
   async function handleSubmit(formData) {
     "use server";
 
-    const { author, content } = Object.fromEntries(formData);
-    const newComment = db.query(
-      `INSERT INTO blog_comments (author, content) VALUES ($1, $2)`,
-      [author, content, postId]
+    const { author, comment } = Object.fromEntries(formData);
+    const newComment = await db.query(
+      `INSERT INTO blog_comments (author, comment, post_id) VALUES ($1, $2, $3)`,
+      [author, comment, postId]
     );
     console.log(newComment);
+
+    revalidatePath(`/posts/${postId}`);
   }
   return (
     <div>
