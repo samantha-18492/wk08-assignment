@@ -1,5 +1,6 @@
 import { db } from "@/app/utils/utilities.js";
 import CommentForm from "@/components/CommentForm";
+import CommentDisplay from "@/components/CommentDisplay";
 
 export default async function Page({ params }) {
   const { id } = await params;
@@ -20,9 +21,10 @@ export default async function Page({ params }) {
         <p className="whitespace-pre-line">{posts.recommended_films}</p>
         <p className="italic">💭 {posts.prompt}</p>
       </div>
-      <CommentForm />
+      <CommentForm postId={id} />
       {/* pass in the id of post to CommentForm so it can use the id to link our new comments to the correct post */}
       {/* Add CommentDisplay /> pass in the id of post (likewise for commentForm) to fetch correct comments*/}
+      <CommentDisplay postId={id} />
     </div>
   );
 }
