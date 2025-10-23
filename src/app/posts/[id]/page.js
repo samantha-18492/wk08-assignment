@@ -22,8 +22,6 @@ export default async function Page({ params }) {
         <p className="italic">💭 {posts.prompt}</p>
       </div>
       <CommentForm postId={id} />
-      {/* pass in the id of post to CommentForm so it can use the id to link our new comments to the correct post */}
-      {/* Add CommentDisplay /> pass in the id of post (likewise for commentForm) to fetch correct comments*/}
       <CommentDisplay postId={id} />
     </div>
   );

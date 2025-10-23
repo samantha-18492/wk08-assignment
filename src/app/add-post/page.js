@@ -1,4 +1,3 @@
-// shows a form so a user can submit their own blog post (fields: name, author, content). this data should be sent to the posts table and the user should be redirected to the posts page (where they should see their new post available to read)
 import { db } from "@/app/utils/utilities.js";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
