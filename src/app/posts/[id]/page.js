@@ -1,4 +1,5 @@
 import { db } from "@/app/utils/utilities.js";
+import CommentForm from "@/components/CommentForm";
 
 export default async function Page({ params }) {
   const { id } = await params;
@@ -20,7 +21,7 @@ export default async function Page({ params }) {
           <p className="italic">💭 {post.prompt}</p>
         </div>
       ))}
-      {/* Add form component */}
+      <CommentForm />
     </div>
   );
 }
