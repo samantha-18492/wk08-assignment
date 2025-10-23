@@ -8,7 +8,7 @@ export default function Page() {
 
     const { title, author, content, recommended_films, prompt } =
       Object.fromEntries(formData);
-    const newPost = db.query(
+    const newPost = await db.query(
       `INSERT INTO blog_posts (title, author, content, recommended_films, prompt) VALUES ($1, $2, $3, $4, $5)`,
       [title, author, content, recommended_films, prompt]
     );
