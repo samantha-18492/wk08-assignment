@@ -16,17 +16,17 @@ export default async function Page({ searchParams }) {
       <h2 className={`${creepster.className} text-3xl pb-4`}>
         Choose your terror
       </h2>
-      <div className="flex justify-end pb-5">
+      <div className="flex justify-center pb-5">
         <p className="py-1">Sort:</p>
         <Link
           href="/posts?sortBy=desc"
-          className="py-1 px-2 rounded-md bg-fear-brown text-white ml-2 mr-2 inline-block shadow-lg shadow-fear-brown/50 hover:bg-fear-green hover:text-fear-brown"
+          className="py-1 px-2 rounded-md bg-fear-green text-fear-brown ml-2 mr-2 inline-block shadow-lg shadow-fear-brown/50 hover:bg-fear-brown hover:text-white"
         >
           Newest to oldest
         </Link>
         <Link
           href="/posts?sortBy=asc"
-          className="py-1 px-2 rounded-md bg-fear-brown text-white ml-2 inline-block shadow-lg shadow-fear-brown/50 hover:bg-fear-green"
+          className="py-1 px-2 rounded-md bg-fear-green text-fear-brown ml-2 inline-block shadow-lg shadow-fear-brown/50 hover:bg-fear-brown hover:text-white"
         >
           Oldest to newest
         </Link>
