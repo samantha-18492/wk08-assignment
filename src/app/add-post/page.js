@@ -6,11 +6,18 @@ export default function Page() {
   async function handleSubmit(formData) {
     "use server";
 
-    const { title, author, content, recommended_films, prompt } =
-      Object.fromEntries(formData);
+    const {
+      title,
+      author,
+      created_at,
+      content,
+      recommended_films,
+      prompt,
+      img_url,
+    } = Object.fromEntries(formData);
     const newPost = await db.query(
-      `INSERT INTO blog_posts (title, author, content, recommended_films, prompt) VALUES ($1, $2, $3, $4, $5)`,
-      [title, author, content, recommended_films, prompt]
+      `INSERT INTO blog_posts (title, author, created_at, content, recommended_films, prompt, img_url) VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+      [title, author, created_at, content, recommended_films, prompt, img_url]
     );
 
     revalidatePath("/posts");
@@ -24,6 +31,8 @@ export default function Page() {
         <input name="title" placeholder="Day [x]: Fear of [x]" required />
         <label>Author&apos;s name</label>
         <input name="author" placeholder="Your name" required />
+        <label>Post date</label>
+        <input name="created_at" placeholder="XX/10/2025" required />
         <label>Main content</label>
         <textarea
           name="content"
@@ -39,7 +48,13 @@ export default function Page() {
         <label>Add a prompt to encourage readers to post a comment</label>
         <input
           name="prompt"
-          placeholder="e.g. What are your thoughts on [insert fear]"
+          placeholder="What are your thoughts on [insert fear]"
+          required
+        />
+        <label>Add an image URL to go with your post</label>
+        <input
+          name="img_url"
+          placeholder="https://images.unsplash.com/photo-1584475784921-d9dbfd9d17ca?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
           required
         />
         <button type="submit">Post</button>
