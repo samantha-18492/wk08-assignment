@@ -23,7 +23,7 @@ export default function Home() {
       </p>
       <Link
         href="/posts"
-        className={`${creepster.className} mt-10 inline-block py-4 px-8 rounded-lg bg-fear-green text-fear-brown text-3xl animate-pulse`}
+        className={`${creepster.className} mt-10 inline-block py-4 px-8 rounded-lg bg-fear-green text-fear-brown text-3xl shadow-lg shadow-fear-brown/50`}
       >
         enter
       </Link>

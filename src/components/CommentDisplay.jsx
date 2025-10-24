@@ -16,7 +16,7 @@ export default async function CommentDisplay({ postId }) {
   }
 
   return (
-    <div>
+    <div className="pb-18">
       {comments.map((comment) => (
         <div key={comment.id}>
           <p>{comment.author}</p>
