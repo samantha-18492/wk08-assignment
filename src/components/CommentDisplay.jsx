@@ -3,9 +3,10 @@ import DeleteButton from "./DeleteButton";
 import { revalidatePath } from "next/cache";
 
 export default async function CommentDisplay({ postId }) {
-  const res = await db.query(`SELECT * FROM blog_comments WHERE post_id = $1`, [
-    postId,
-  ]);
+  const res = await db.query(
+    `SELECT * FROM blog_comments WHERE post_id = $1 ORDER BY id DESC`,
+    [postId]
+  );
   const comments = res.rows;
 
   async function handleDelete(commentId) {
