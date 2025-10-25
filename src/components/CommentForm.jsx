@@ -39,7 +39,7 @@ export default function CommentForm({ postId }) {
         <div className="justify-center text-center">
           <button
             type="submit"
-            className="bg-fear-green rounded-md px-8 font-bold py-1 shadow-md shadow-fear-brown/50 hover:bg-fear-brown hover:text-white"
+            className="bg-fear-green text-fear-off-white rounded-md px-8 font-bold py-1 shadow-md shadow-fear-brown/50 hover:bg-fear-brown hover:text-white"
           >
             Submit
           </button>

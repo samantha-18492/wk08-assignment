@@ -17,7 +17,7 @@ export default async function Page({ params }) {
       <div className="flex justify-end pb-4">
         <Link
           href="/posts"
-          className="py-2 px-4 rounded-full bg-fear-green text-fear-brown text-2xl shadow-lg shadow-fear-brown/50 hover:bg-fear-brown hover:text-white"
+          className="py-2 px-4 rounded-full bg-fear-green text-fear-off-white text-2xl shadow-lg shadow-fear-brown/50 hover:bg-fear-brown hover:text-white"
         >
           Back
         </Link>

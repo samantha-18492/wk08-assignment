@@ -20,13 +20,13 @@ export default async function Page({ searchParams }) {
         <p className="py-1">Sort:</p>
         <Link
           href="/posts?sortBy=desc"
-          className="py-1 px-2 rounded-md bg-fear-green text-fear-brown ml-2 mr-2 inline-block shadow-lg shadow-fear-brown/50 hover:bg-fear-brown hover:text-white"
+          className="py-1 px-2 rounded-md bg-fear-green text-fear-off-white ml-2 mr-2 inline-block shadow-lg shadow-fear-brown/50 hover:bg-gray-600 hover:text-white"
         >
           Newest to oldest
         </Link>
         <Link
           href="/posts?sortBy=asc"
-          className="py-1 px-2 rounded-md bg-fear-green text-fear-brown ml-2 inline-block shadow-lg shadow-fear-brown/50 hover:bg-fear-brown hover:text-white"
+          className="py-1 px-2 rounded-md bg-fear-green text-fear-off-white ml-2 inline-block shadow-lg shadow-fear-brown/50 hover:bg-gray-600 hover:text-white"
         >
           Oldest to newest
         </Link>

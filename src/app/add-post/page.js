@@ -85,7 +85,7 @@ export default function Page() {
         <div className="justify-center text-center pt-2">
           <button
             type="submit"
-            className="bg-fear-green rounded-md text-3xl px-8 font-bold py-2 shadow-md shadow-fear-brown/50 hover:bg-fear-brown hover:text-white"
+            className="bg-fear-green text-fear-off-white rounded-md text-3xl px-8 font-bold py-2 shadow-md shadow-fear-brown/50 hover:bg-fear-brown hover:text-white"
           >
             Post
           </button>
