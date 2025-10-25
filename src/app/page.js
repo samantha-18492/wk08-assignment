@@ -3,7 +3,7 @@ import { creepster } from "./layout";
 
 export default function Home() {
   return (
-    <div>
+    <section>
       <p className="mt-5">
         October is the season of shadows, stories, and self-discovery, and here
         at 31 Days of Fear, we’re taking that spirit a little deeper. Every day
@@ -27,6 +27,6 @@ export default function Home() {
       >
         enter
       </Link>
-    </div>
+    </section>
   );
 }

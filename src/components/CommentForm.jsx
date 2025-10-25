@@ -18,7 +18,7 @@ export default function CommentForm({ postId }) {
     redirect(`/posts/${postId}`);
   }
   return (
-    <div className="py-6">
+    <section className="py-6">
       <h2 className={`${creepster.className} text-3xl pb-4`}>Add a comment</h2>
       <form
         action={handleSubmit}
@@ -45,6 +45,6 @@ export default function CommentForm({ postId }) {
           </button>
         </div>
       </form>
-    </div>
+    </section>
   );
 }

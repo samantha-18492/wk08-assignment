@@ -22,7 +22,7 @@ export default async function Page({ params }) {
           Back
         </Link>
       </div>
-      <div className="text-left">
+      <section className="text-left">
         <h2 className="font-bold text-3xl">{posts.title}</h2>
         <div className="flex gap-6">
           <p className="text-lg">By {posts.author}</p>
@@ -41,7 +41,7 @@ export default async function Page({ params }) {
         </h2>
         <p className="whitespace-pre-line pb-6">{posts.recommended_films}</p>
         <p className="italic">💬 {posts.prompt}</p>
-      </div>
+      </section>
       <CommentForm postId={id} />
       <h2 className={`${creepster.className} text-3xl pb-4`}>Comments</h2>
       <CommentDisplay postId={id} />

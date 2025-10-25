@@ -17,7 +17,7 @@ export default async function CommentDisplay({ postId }) {
   }
 
   return (
-    <div className="pb-20 text-left">
+    <section className="pb-20 text-left">
       <div>
         {comments.length === 0 ? (
           <div className=" bg-white border-2 border-fear-orange shadow-lg rounded-sm p-2 m-2">
@@ -42,6 +42,6 @@ export default async function CommentDisplay({ postId }) {
           ))
         )}
       </div>
-    </div>
+    </section>
   );
 }

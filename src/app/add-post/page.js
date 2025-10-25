@@ -25,7 +25,7 @@ export default function Page() {
     redirect("/posts");
   }
   return (
-    <div className="pb-24">
+    <section className="pb-24">
       <h2 className={`${creepster.className} text-3xl pb-4`}>
         Write your own fright
       </h2>
@@ -91,6 +91,6 @@ export default function Page() {
           </button>
         </div>
       </form>
-    </div>
+    </section>
   );
 }

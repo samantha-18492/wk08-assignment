@@ -12,7 +12,7 @@ export default async function Page({ searchParams }) {
   }
 
   return (
-    <div>
+    <section>
       <h2 className={`${creepster.className} text-3xl pb-4`}>
         Choose your terror
       </h2>
@@ -45,6 +45,6 @@ export default async function Page({ searchParams }) {
           </Link>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
