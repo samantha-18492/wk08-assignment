@@ -19,16 +19,28 @@ export default async function CommentDisplay({ postId }) {
   return (
     <div className="pb-20 text-left">
       <div>
-        {comments.map((comment) => (
-          <div
-            key={comment.id}
-            className=" bg-white border-2 border-fear-orange shadow-lg rounded-sm p-2 m-2"
-          >
-            <p className="text-xl text-gray-700">{comment.author}</p>
-            <p className="italic">{comment.comment}</p>
-            <DeleteButton commentId={comment.id} handleDelete={handleDelete} />
+        {comments.length === 0 ? (
+          <div className=" bg-white border-2 border-fear-orange shadow-lg rounded-sm p-2 m-2">
+            <p>
+              👻 This fear is still waiting for its first victim! Be the first
+              to break the silence using the comment form above.
+            </p>
           </div>
-        ))}
+        ) : (
+          comments.map((comment) => (
+            <div
+              key={comment.id}
+              className=" bg-white border-2 border-fear-orange shadow-lg rounded-sm p-2 m-2"
+            >
+              <p className="text-xl text-gray-700">{comment.author}</p>
+              <p className="italic">{comment.comment}</p>
+              <DeleteButton
+                commentId={comment.id}
+                handleDelete={handleDelete}
+              />
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
